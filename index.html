@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOVADEAL — Discover. Compare. Shop.</title>
+
+<meta name="theme-color" content="#111111">
+<meta name="robots" content="index,follow">
+<meta name="author" content="NOVADEAL">
+<meta name="keywords" content="best products, gadgets, product finds, shopping, product recommendations, deals">
+<link rel="canonical" href="https://xddhudx.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23111'/%3E%3Ctext x='50' y='64' text-anchor='middle' font-family='Arial' font-size='55' font-weight='800' fill='white'%3EN%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NOVADEAL — Discover. Compare. Shop smarter.">
+<meta property="og:description" content="Curated product finds, useful gadgets and interesting discoveries from across the web.">
+<meta property="og:site_name" content="NOVADEAL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NOVADEAL — Discover. Compare. Shop smarter.">
+<meta name="twitter:description" content="Curated product finds and useful discoveries from across the web.">
+
+<meta name="description" content="NOVADEAL — стильная подборка интересных товаров, гаджетов и находок из интернета.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f5f5f3;--card:#fff;--text:#111;--muted:#777;--line:#e8e8e5;--dark:#111}
+body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(245,245,243,.88);backdrop-filter:blur(18px);border-bottom:1px solid rgba(0,0,0,.06)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:22px;font-weight:800;letter-spacing:-1.2px}
+.logo span{font-weight:400}
+.menu{display:flex;gap:30px;color:#555;font-size:14px}
+.menu a:hover{color:#000}
+.navbtn{background:#111;color:#fff;border-radius:99px;padding:11px 18px;font-size:13px;font-weight:600}
+.hero{padding:76px 0 45px}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:22px}
+.hero-main{background:#111;color:#fff;border-radius:32px;min-height:500px;padding:54px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative}
+.hero-main:after{content:"";position:absolute;width:360px;height:360px;border-radius:50%;right:-110px;bottom:-130px;background:radial-gradient(circle,#555,#111 68%);opacity:.7}
+.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#aaa;font-weight:700}
+.hero h1{font-size:clamp(46px,6vw,82px);line-height:.95;letter-spacing:-5px;max-width:720px;position:relative;z-index:1}
+.hero p{max-width:480px;color:#b8b8b8;font-size:16px;margin-top:22px;position:relative;z-index:1}
+.hero-actions{display:flex;gap:10px;position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:99px;font-size:13px;font-weight:700}
+.btn-light{background:#fff;color:#111}.btn-ghost{border:1px solid #444;color:#fff}
+.hero-side{display:grid;grid-template-rows:1fr 1fr;gap:22px}
+.side-card{border-radius:32px;padding:30px;position:relative;overflow:hidden;min-height:239px;background:#ddd}
+.side-card:first-child{background:linear-gradient(135deg,#d9d9d5,#a9aaa5)}
+.side-card:last-child{background:#e9e7e2}
+.side-card .tag{display:inline-block;background:rgba(255,255,255,.72);padding:7px 11px;border-radius:99px;font-size:11px;font-weight:700}
+.side-card h3{font-size:27px;letter-spacing:-1.4px;max-width:240px;margin-top:42px}
+.side-card .orb{position:absolute;width:180px;height:180px;border-radius:50%;right:-35px;bottom:-45px;background:radial-gradient(circle at 35% 30%,#fff,#999);box-shadow:0 20px 50px rgba(0,0,0,.18)}
+.side-card:last-child .orb{background:radial-gradient(circle at 30% 30%,#fff,#c6c0b7);width:140px;height:140px}
+.section{padding:30px 0 70px}
+.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:22px}
+.section-head h2{font-size:34px;letter-spacing:-2px}
+.section-head p{font-size:13px;color:var(--muted)}
+.categories{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.cat{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px 14px;transition:.2s}
+.cat:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(0,0,0,.06)}
+.cat-icon{font-size:25px;margin-bottom:22px}
+.cat b{font-size:13px}.cat small{display:block;color:#999;margin-top:3px;font-size:11px}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.product{background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;transition:.25s}
+.product:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(0,0,0,.08)}
+.product-img{height:235px;background:#eee;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.product-img:before{content:"";width:150px;height:150px;border-radius:50%;background:radial-gradient(circle at 35% 25%,#fff,#aaa);box-shadow:0 18px 40px rgba(0,0,0,.16)}
+.product:nth-child(2) .product-img{background:#e6e5e1}.product:nth-child(2) .product-img:before{width:125px;height:125px;background:linear-gradient(145deg,#f7f7f7,#8b8b8b);border-radius:24px}
+.product:nth-child(3) .product-img{background:#dedbd4}.product:nth-child(3) .product-img:before{width:170px;height:90px;border-radius:45px;background:linear-gradient(145deg,#fff,#aaa)}
+.product:nth-child(4) .product-img{background:#dcdcdc}.product:nth-child(4) .product-img:before{width:115px;height:180px;border-radius:25px;background:linear-gradient(145deg,#fff,#777)}
+.badge{position:absolute;left:13px;top:13px;background:#111;color:#fff;padding:7px 10px;border-radius:99px;font-size:10px;font-weight:700}
+.product-info{padding:17px}
+.product-info h3{font-size:15px;letter-spacing:-.4px}
+.product-info p{font-size:11px;color:#888;margin:5px 0 13px}
+.price{display:flex;align-items:center;justify-content:space-between}
+.price strong{font-size:16px}.price span{font-size:11px;color:#999}
+.product-btn{margin-top:14px;width:100%;border:0;background:#111;color:#fff;padding:12px;border-radius:12px;font-weight:700;font-size:12px;cursor:pointer}
+.feature{margin-top:15px;background:#111;color:#fff;border-radius:30px;padding:42px;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.feature h2{font-size:43px;line-height:1;letter-spacing:-2.5px}
+.feature p{color:#aaa;font-size:14px;margin-top:15px;max-width:440px}
+.feature-box{background:#1c1c1c;border:1px solid #303030;border-radius:24px;padding:25px}
+.feature-box div{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid #303030;font-size:13px}.feature-box div:last-child{border:0}.feature-box span{color:#888}
+footer{border-top:1px solid var(--line);padding:35px 0 50px;color:#888;font-size:12px}
+.footer{display:flex;justify-content:space-between;gap:20px}.footer b{color:#111}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.categories{grid-template-columns:repeat(3,1fr)}.products{grid-template-columns:repeat(2,1fr)}.feature{grid-template-columns:1fr}.menu{display:none}}
+@media(max-width:560px){.nav{height:64px}.navbtn{padding:9px 13px}.hero{padding-top:35px}.hero-main{min-height:490px;padding:30px;border-radius:25px}.hero h1{font-size:50px;letter-spacing:-3.5px}.hero-side{grid-template-rows:1fr 1fr}.side-card{border-radius:25px}.categories{grid-template-columns:repeat(2,1fr)}.products{grid-template-columns:1fr 1fr;gap:9px}.product-img{height:160px}.product-info{padding:12px}.product-info h3{font-size:13px}.feature{padding:28px;border-radius:25px}.feature h2{font-size:34px}.footer{flex-direction:column}}
+
+.lang-select{appearance:none;border:1px solid #ddd;background:#fff;border-radius:99px;padding:10px 32px 10px 13px;font:600 12px Inter,Arial,sans-serif;color:#222;cursor:pointer;background-image:linear-gradient(45deg,transparent 50%,#777 50%),linear-gradient(135deg,#777 50%,transparent 50%);background-position:calc(100% - 14px) 50%,calc(100% - 10px) 50%;background-size:4px 4px,4px 4px;background-repeat:no-repeat}
+.nav-right{display:flex;align-items:center;gap:9px}
+@media(max-width:560px){.nav-right .navbtn{display:none}.lang-select{padding:9px 28px 9px 10px}}
+
+/* Store UX */
+.store-toolbar{display:flex;gap:10px;align-items:center;margin-bottom:18px;flex-wrap:wrap}
+.search-box{flex:1;min-width:220px;position:relative}
+.search-box input{width:100%;border:1px solid var(--line);background:#fff;border-radius:14px;padding:13px 15px;font:500 13px Inter,Arial,sans-serif;outline:none}
+.search-box input:focus{border-color:#aaa}
+.filter-btn{border:1px solid var(--line);background:#fff;border-radius:14px;padding:13px 16px;font:600 12px Inter;cursor:pointer}
+.filter-btn.active{background:#111;color:#fff;border-color:#111}
+.product.hidden{display:none}
+.product-note{font-size:10px;color:#aaa;margin-top:8px}
+.product-img .visual-label{position:absolute;bottom:13px;right:13px;background:rgba(255,255,255,.75);padding:6px 9px;border-radius:8px;font-size:9px;font-weight:700}
+.drawer{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:50;display:none;align-items:flex-end}
+.drawer.open{display:flex}
+.drawer-card{background:#fff;width:100%;border-radius:26px 26px 0 0;padding:26px;max-height:75vh;overflow:auto}
+.drawer-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.close{border:0;background:#eee;border-radius:50%;width:34px;height:34px;cursor:pointer}
+.drawer a{display:block;padding:14px 0;border-bottom:1px solid #eee;font-size:13px}
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:15px}
+.trust{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px}
+.trust b{display:block;font-size:14px;margin-bottom:7px}.trust p{font-size:11px;color:#888}
+.legal{padding:80px 0}.legal-card{background:#fff;border:1px solid var(--line);border-radius:26px;padding:34px;max-width:850px;margin:auto}.legal-card h2{font-size:30px;letter-spacing:-1.5px;margin-bottom:15px}.legal-card h3{font-size:15px;margin:24px 0 7px}.legal-card p,.legal-card li{font-size:13px;color:#666;line-height:1.7}.legal-card ul{padding-left:20px}
+.cookie{position:fixed;left:18px;right:18px;bottom:18px;z-index:60;background:#111;color:#fff;border-radius:18px;padding:15px 17px;display:flex;align-items:center;justify-content:space-between;gap:15px;box-shadow:0 15px 45px rgba(0,0,0,.2);font-size:11px}
+.cookie button{border:0;background:#fff;color:#111;border-radius:99px;padding:10px 15px;font-weight:700;cursor:pointer;white-space:nowrap}
+@media(max-width:700px){.trust-grid{grid-template-columns:1fr}.cookie{align-items:flex-start;flex-direction:column}.cookie button{width:100%}}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"NOVADEAL",
+  "description":"Curated product finds, useful gadgets and interesting discoveries from across the web.",
+  "url":"https://xddhudx.github.io/"
+}
+</script>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#">NOVA<span>DEAL</span></a>
+    <nav class="menu">
+      <a href="#popular" data-i18n="navPopular">Popular</a>
+      <a href="#categories" data-i18n="nav<span data-i18n="categoriesTitle">Categories</span>"><span data-i18n="categoriesTitle">Categories</span></a>
+      <a href="#about" data-i18n="navAbout">About</a>
+    </nav>
+    <div class="nav-right">
+      <select class="lang-select" id="languageSelect" aria-label="Language">
+        <option value="en">EN</option>
+        <option value="ru">RU</option>
+        <option value="de">DE</option>
+        <option value="es">ES</option>
+        <option value="fr">FR</option>
+        <option value="it">IT</option>
+      </select>
+      <a class="navbtn" href="#popular" data-i18n="navButton">Explore finds</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+<div class="container hero-grid">
+  <div class="hero-main">
+    <div><div class="eyebrow">Curated finds · 2026</div></div>
+    <div>
+      <h1><span data-i18n="heroTitle">Discover.<br>Compare.<br>Shop smarter.</span></h1>
+      <p><span data-i18n="heroText">We collect interesting products from across the web, so you can spend less time searching and more time discovering.</span></p>
+    </div>
+    <div class="hero-actions"><a class="btn btn-light" href="#popular"><span data-i18n="heroExplore">Explore products ↓</span></a><a class="btn btn-ghost" href="#categories"><span data-i18n="categoriesTitle">Categories</span></a></div>
+  </div>
+  <div class="hero-side">
+    <a class="side-card" href="#popular"><span class="tag">TRENDING</span><h3>What’s trending now</h3><div class="orb"></div></a>
+    <a class="side-card" href="#popular"><span class="tag">EDITOR'S PICK</span><h3>Products worth a closer look</h3><div class="orb"></div></a>
+  </div>
+</div>
+</section>
+
+<section class="section" id="categories">
+<div class="container">
+  <div class="section-head"><div><h2><span data-i18n="categoriesTitle">Categories</span></h2><p><span data-i18n="categoriesText">Choose a category and explore the collection.</span></p></div></div>
+  <div class="categories">
+    <a class="cat" href="#popular"><div class="cat-icon">◉</div><b>Gadgets</b><small>Tech & smart</small></a>
+    <a class="cat" href="#popular"><div class="cat-icon">⌂</div><b>Home</b><small>Useful essentials</small></a>
+    <a class="cat" href="#popular"><div class="cat-icon">✦</div><b>Style</b><small>Accessories</small></a>
+    <a class="cat" href="#popular"><div class="cat-icon">↗</div><b>Fitness</b><small>For active life</small></a>
+    <a class="cat" href="#popular"><div class="cat-icon">♢</div><b>Auto</b><small>Autoтовары</small></a>
+    <a class="cat" href="#popular"><div class="cat-icon">＋</div><b>Gifts</b><small>Ideas & finds</small></a>
+  </div>
+</div>
+</section>
+
+<section class="section" id="popular">
+<div class="container">
+  <div class="section-head"><div><h2><span data-i18n="popularTitle">Popular picks</span></h2><p><span data-i18n="popularText">Curated examples — real affiliate links will be added later.</span></p></div></div>
+  
+<div class="store-toolbar">
+  <div class="search-box">
+    <input id="productSearch" type="search" placeholder="Search products..." aria-label="Search products">
+  </div>
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="gadgets">Gadgets</button>
+  <button class="filter-btn" data-filter="home">Home</button>
+  <button class="filter-btn" data-filter="style">Style</button>
+</div>
+
+  <div class="products">
+    <article class="product" data-category="gadgets" data-name="smart led lamp"><div class="product-img"><span class="badge">ТОП</span></div><div class="product-info"><h3>Smart LED Lamp</h3><p>Smart lighting for your workspace</p><div class="price"><strong>€29,99</strong><span>★★★★★</span></div><button class="product-btn" onclick="demo()">View product →</button></div></article>
+    <article class="product" data-category="gadgets" data-name="wireless charging dock"><div class="product-img"><span class="badge">FIND</span></div><div class="product-info"><h3>Wireless Charging Dock</h3><p>Compact charging station</p><div class="price"><strong>€34,90</strong><span>★★★★☆</span></div><button class="product-btn" onclick="demo()">View product →</button></div></article>
+    <article class="product" data-category="gadgets" data-name="portable speaker"><div class="product-img"><span class="badge">TREND</span></div><div class="product-info"><h3>Portable Speaker</h3><p>Music at home and on the go</p><div class="price"><strong>€49,99</strong><span>★★★★★</span></div><button class="product-btn" onclick="demo()">View product →</button></div></article>
+    <article class="product" data-category="gadgets" data-name="mini smart projector"><div class="product-img"><span class="badge">NEW</span></div><div class="product-info"><h3>Mini Smart Projector</h3><p>Cinema anywhere</p><div class="price"><strong>€79,00</strong><span>★★★★☆</span></div><button class="product-btn" onclick="demo()">View product →</button></div></article>
+  
+<article class="product" data-category="home" data-name="minimal desk organizer">
+  <div class="product-img"><span class="badge">HOME</span><span class="visual-label">Minimal</span></div>
+  <div class="product-info"><h3>Minimal Desk Organizer</h3><p>Clean setup for your workspace</p><div class="price"><strong>€24,90</strong><span>★★★★★</span></div><button class="product-btn" onclick="demo()">View product →</button><div class="product-note">Example listing — affiliate link coming soon</div></div>
+</article>
+<article class="product" data-category="style" data-name="everyday backpack">
+  <div class="product-img"><span class="badge">STYLE</span><span class="visual-label">Everyday</span></div>
+  <div class="product-info"><h3>Everyday Backpack</h3><p>Simple design for work and travel</p><div class="price"><strong>€39,90</strong><span>★★★★☆</span></div><button class="product-btn" onclick="demo()">View product →</button><div class="product-note">Example listing — affiliate link coming soon</div></div>
+</article>
+
+</div>
+</div>
+</section>
+
+
+<section class="section">
+<div class="container">
+  <div class="section-head"><div><h2 data-i18n="trustTitle">Built around useful choices</h2><p data-i18n="trustText">Simple recommendations, clear information and direct retailer links.</p></div></div>
+  <div class="trust-grid">
+    <div class="trust"><b>01 · Curated</b><p>We focus on products that are useful, interesting or worth comparing.</p></div>
+    <div class="trust"><b>02 · Transparent</b><p>Some links may be affiliate links, which can earn NOVADEAL a commission.</p></div>
+    <div class="trust"><b>03 · Independent</b><p>NOVADEAL is a product discovery project, not the retailer itself.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="section" id="about">
+<div class="container">
+<div class="feature">
+  <div><div class="eyebrow">Why NOVADEAL</div><h2><span data-i18n="aboutTitle">Less searching.<br>More discovering.</span></h2><p>NOVADEAL is an independent showcase of interesting products, with curated lists, short reviews and links to retailers where you can view the product.</p></div>
+  <div class="feature-box"><div><b>01</b><span>Curate what matters</span></div><div><b>02</b><span>Compare options</span></div><div><b>03</b><span>Build useful collections</span></div><div><b>04</b><span>Visit the retailer</span></div></div>
+</div>
+</div>
+</section>
+</main>
+
+
+<section class="legal" id="affiliate">
+<div class="container"><div class="legal-card">
+<h2>Affiliate Disclosure</h2>
+<p>NOVADEAL may use affiliate links. If you click an affiliate link and make a qualifying purchase on a retailer’s website, NOVADEAL may receive a commission at no additional cost to you.</p>
+<h3>Important</h3>
+<p>Prices, availability, shipping and product details are determined by the retailer and may change. NOVADEAL is not the seller of the products displayed on this website.</p>
+</div></div>
+</section>
+<section class="legal" id="privacy">
+<div class="container"><div class="legal-card">
+<h2>Privacy</h2>
+<p>NOVADEAL is designed as a lightweight product-discovery website. This demo does not ask visitors to create an account or enter payment information.</p>
+<h3>External retailers</h3>
+<p>When you follow a product link, you may leave NOVADEAL and visit a third-party retailer. That retailer’s own privacy policy and terms then apply.</p>
+<h3>Cookies</h3>
+<p>Any analytics or advertising tools added in the future will be disclosed and configured according to the applicable requirements.</p>
+</div></div>
+</section>
+
+<footer><div class="container footer"><div><b>NOVADEAL</b> — <span data-i18n="footerTag">curated finds from the web.</span></div><div><span data-i18n="affiliateNote">Affiliate links may earn us a commission from qualifying purchases.</span></div></div></footer>
+<script>
+function demo(){alert('Demo listing: this button will become a real affiliate link after we connect the partner program.');}
+function acceptCookies(){localStorage.setItem("novadeal-cookie","1");document.getElementById("cookieNotice").style.display="none";}
+if(localStorage.getItem("novadeal-cookie")==="1"){document.getElementById("cookieNotice").style.display="none";}
+const searchInput=document.getElementById("productSearch");
+const filterButtons=document.querySelectorAll(".filter-btn");
+const products=document.querySelectorAll(".product");
+function filterProducts(){
+  const q=(searchInput.value||"").toLowerCase().trim();
+  const active=document.querySelector(".filter-btn.active")?.dataset.filter||"all";
+  products.forEach(p=>{
+    const matchText=(p.dataset.name||"").includes(q);
+    const matchCat=active==="all"||p.dataset.category===active;
+    p.classList.toggle("hidden",!(matchText&&matchCat));
+  });
+}
+searchInput?.addEventListener("input",filterProducts);
+filterButtons.forEach(btn=>btn.addEventListener("click",()=>{
+  filterButtons.forEach(b=>b.classList.remove("active"));btn.classList.add("active");filterProducts();
+}));
+</script>
+
+<script>
+const translations = {
+  en: {
+    navPopular:"Popular", navCategories:"Categories", navAbout:"About", navButton:"Explore finds",
+    heroTitle:"Discover.<br>Compare.<br>Shop smarter.",
+    heroText:"We collect interesting products from across the web, so you can spend less time searching and more time discovering.",
+    heroExplore:"Explore products ↓", categoriesTitle:"Categories", categoriesText:"Choose a category and explore the collection.",
+    popularTitle:"Popular picks", popularText:"Curated examples — real affiliate links will be added later.",
+    aboutTitle:"Less searching.<br>More discovering.", footerTag:"curated finds from the web.",
+    trustTitle:"Built around useful choices", trustText:"Simple recommendations, clear information and direct retailer links.", affiliateNote:"Affiliate links may earn us a commission from qualifying purchases."
+  },
+  ru: {
+    navPopular:"Популярное", navCategories:"Категории", navAbout:"О проекте", navButton:"Смотреть находки",
+    heroTitle:"Находи.<br>Сравнивай.<br>Покупай умнее.",
+    heroText:"Мы собираем интересные товары со всего интернета, чтобы ты тратил меньше времени на поиск и больше — на выбор.",
+    heroExplore:"Смотреть товары ↓", categoriesTitle:"Категории", categoriesText:"Выбери категорию и исследуй подборку.",
+    popularTitle:"Популярное", popularText:"Примеры подборок — настоящие партнёрские ссылки добавим позже.",
+    aboutTitle:"Меньше поиска.<br>Больше находок.", footerTag:"находки из интернета.",
+    trustTitle:"Создано вокруг полезного выбора", trustText:"Понятные рекомендации, информация и прямые ссылки на продавцов.", affiliateNote:"Партнёрские ссылки могут приносить нам комиссию с квалифицированных покупок."
+  },
+  de: {
+    navPopular:"Beliebt", navCategories:"Kategorien", navAbout:"Über uns", navButton:"Entdeckungen ansehen",
+    heroTitle:"Entdecken.<br>Vergleichen.<br>Smarter shoppen.",
+    heroText:"Wir sammeln interessante Produkte aus dem Web, damit du weniger suchen und mehr entdecken kannst.",
+    heroExplore:"Produkte entdecken ↓", categoriesTitle:"Kategorien", categoriesText:"Wähle eine Kategorie und entdecke die Auswahl.",
+    popularTitle:"Beliebte Produkte", popularText:"Beispielauswahl — echte Affiliate-Links werden später ergänzt.",
+    aboutTitle:"Weniger suchen.<br>Mehr entdecken.", footerTag:"kuratierte Fundstücke aus dem Web.",
+    affiliateNote:"Affiliate-Links können uns bei qualifizierten Käufen eine Provision einbringen."
+  },
+  es: {
+    navPopular:"Popular", navCategories:"Categorías", navAbout:"Sobre el proyecto", navButton:"Ver productos",
+    heroTitle:"Descubre.<br>Compara.<br>Compra mejor.",
+    heroText:"Reunimos productos interesantes de toda la web para que pases menos tiempo buscando y más tiempo descubriendo.",
+    heroExplore:"Explorar productos ↓", categoriesTitle:"Categorías", categoriesText:"Elige una categoría y descubre la selección.",
+    popularTitle:"Selección popular", popularText:"Ejemplos de productos — los enlaces de afiliado reales se añadirán después.",
+    aboutTitle:"Menos búsquedas.<br>Más descubrimientos.", footerTag:"selecciones de la web.",
+    affiliateNote:"Los enlaces de afiliado pueden generarnos una comisión por compras que cumplan los requisitos."
+  },
+  fr: {
+    navPopular:"Populaire", navCategories:"Catégories", navAbout:"À propos", navButton:"Voir les trouvailles",
+    heroTitle:"Découvrez.<br>Comparez.<br>Achetez mieux.",
+    heroText:"Nous sélectionnons des produits intéressants sur le web pour vous faire gagner du temps.",
+    heroExplore:"Découvrir les produits ↓", categoriesTitle:"Catégories", categoriesText:"Choisissez une catégorie et explorez la sélection.",
+    popularTitle:"Sélection populaire", popularText:"Exemples — les vrais liens affiliés seront ajoutés plus tard.",
+    aboutTitle:"Moins de recherche.<br>Plus de découvertes.", footerTag:"sélections du web.",
+    affiliateNote:"Les liens affiliés peuvent nous rapporter une commission sur les achats admissibles."
+  },
+  it: {
+    navPopular:"Popolari", navCategories:"Categorie", navAbout:"Chi siamo", navButton:"Scopri le selezioni",
+    heroTitle:"Scopri.<br>Confronta.<br>Acquista meglio.",
+    heroText:"Raccogliamo prodotti interessanti dal web per farti passare meno tempo a cercare e più tempo a scoprire.",
+    heroExplore:"Esplora prodotti ↓", categoriesTitle:"Categorie", categoriesText:"Scegli una categoria ed esplora la selezione.",
+    popularTitle:"Scelti dal pubblico", popularText:"Esempi di prodotti — i veri link affiliati saranno aggiunti in seguito.",
+    aboutTitle:"Meno ricerca.<br>Più scoperte.", footerTag:"selezioni dal web.",
+    affiliateNote:"I link affiliati possono farci guadagnare una commissione sugli acquisti idonei."
+  }
+};
+function setLanguage(lang){
+  const t=translations[lang]||translations.en;
+  document.documentElement.lang=lang;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const key=el.dataset.i18n;
+    if(t[key]!==undefined) el.innerHTML=t[key];
+  });
+  localStorage.setItem("novadeal-language",lang);
+}
+const select=document.getElementById("languageSelect");
+const saved=localStorage.getItem("novadeal-language")||"en";
+select.value=saved;
+select.addEventListener("change",e=>setLanguage(e.target.value));
+setLanguage(saved);
+</script>
+
+
+<div class="cookie" id="cookieNotice">
+  <span>We use essential browser storage for language preferences. Third-party retailer sites may use their own cookies.</span>
+  <button onclick="acceptCookies()">Got it</button>
+</div>
+
+</body>
+</html>

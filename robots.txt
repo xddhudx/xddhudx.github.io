@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://xddhudx.github.io/sitemap.xml
